@@ -7,18 +7,19 @@ import NoteChild from '../NoteChile/NoteChild';
 import ProjectReview from '../ProjectReview/ProjectReview';
 import Testimonial from '../Testimonial/Testimonial';
 import News from '../News/News';
+import Gallery from '../Gallery/Gallery';
 
 const Home = () => {
     return (
         <div>
             <Banner/>
             <BenefitOfDonation/>
-            {/* <HeroSection/> */}
             <DonateService/>
             <AboutDonation/>
             <NoteChild/>
-            <ProjectReview/>
             <Testimonial/>
+            <Gallery/>
+            <ProjectReview/>
             <News/>
         </div>
     );

@@ -2,6 +2,15 @@
  
 const Footer = () => {
     return (
+      <>
+      <div className="p-8 rounded bg-orange-500 shadow-xl sm:p-12">
+          <div className=" flex flex-col  lg:flex-row justify-between">
+            <h2 className="font-sans text-2xl font-bold tracking-tight text-gray-900 sm:text-2xl sm:leading-none">
+            Subscribe and receive weekly our newsletter
+            </h2>
+            <button className="btn text-white hover:bg-stone-700 hover:border-none btn-outline">Subscribe</button>
+          </div>
+        </div>
       <div className="bg-gray-900">
         <div className="px-4 pt-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
           <div className="grid row-gap-10 mb-8 lg:grid-cols-6">
@@ -233,6 +242,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
+      </>
     );
   };
   export default Footer;

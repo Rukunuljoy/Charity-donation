@@ -3,6 +3,8 @@ import Main from "../../layout/Main";
 import Home from "../component/Home/Home";
 import Login from "../shared/Login/Login";
 import Registration from "../shared/Registration/Registration";
+import Gallery from "../component/Gallery/Gallery";
+import DonateService from "../component/DonateService/DonateService";
 
 export const router = createBrowserRouter([
     {
@@ -20,7 +22,15 @@ export const router = createBrowserRouter([
            {
             path:'/registration',
             element:<Registration/>
-           }
+           },
+           {
+            path:'/gallery',
+            element:<Gallery/>
+           },
+           {
+            path:'/causes',
+            element:<DonateService/>
+           },
         ]
     }
 ])

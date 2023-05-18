@@ -23,6 +23,9 @@ const Navbar = () => {
           <li className="font-semibold">
             <Link to="/blog">Blog</Link>
           </li>
+          <li className="font-semibold">
+            <Link to="/contact">Contact Us</Link>
+          </li>
      
         <li className="font-semibold">
           <Link to="/login">Login</Link>
