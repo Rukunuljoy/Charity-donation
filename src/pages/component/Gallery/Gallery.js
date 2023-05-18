@@ -36,12 +36,17 @@ const Gallery = () => {
     },
     {
       id:7,
-      img:'https://i.ibb.co/mtRMhJH/yannis-h-ua-Pa-EM7-Mi-QQ-unsplash.jpg',
+      img:'https://i.ibb.co/7bPxWBC/about2.jpg',
       des:'Painted between 1503 and 1517, Da Vinci’s alluring portrait hasbeen dogged by two questions since the day it was made: Who’s the subject and why is she smiling?'
     },
     {
       id:8,
       img:'https://i.ibb.co/mtRMhJH/yannis-h-ua-Pa-EM7-Mi-QQ-unsplash.jpg',
+      des:'Painted between 1503 and 1517, Da Vinci’s alluring portrait hasbeen dogged by two questions since the day it was made: Who’s the subject and why is she smiling?'
+    },
+    {
+      id:9,
+      img:'https://i.ibb.co/8zV4c1Y/johann-walter-bantz-wo-E5-G6zz-FQo-unsplash.jpg',
       des:'Painted between 1503 and 1517, Da Vinci’s alluring portrait hasbeen dogged by two questions since the day it was made: Who’s the subject and why is she smiling?'
     },
   ]
@@ -52,10 +57,10 @@ const Gallery = () => {
             <p>"Class is dead", says Foucault; however, according to Reicher, it is not so much class that <br/> is dead, it is not so much class that is dead,</p>
            </div>
     <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
-      <div className="grid gap-6 row-gap-5 mb-8 lg:grid-cols-4 sm:row-gap-6 sm:grid-cols-2">
+      <div className="grid gap-6 row-gap-5 mb-8 lg:grid-cols-3 sm:row-gap-6 sm:grid-cols-1">
         {
           location.pathname === '/' ? 
-          (galleryData.length > 0  && galleryData?.slice(0, 4).map((gallery)=>(<a key={gallery.id} href="/" aria-label="View Item">
+          (galleryData.length > 0  && galleryData?.slice(0, 3).map((gallery)=>(<a key={gallery.id} href="/" aria-label="View Item">
           <div className="relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl">
             <img
               className="object-cover w-full h-56 md:h-64 xl:h-80"

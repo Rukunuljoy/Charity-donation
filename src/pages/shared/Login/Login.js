@@ -3,6 +3,8 @@ import { useForm } from "react-hook-form";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../context/AuthProvider";
 import { GoogleAuthProvider } from "firebase/auth";
+import { ToastContainer, toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
   const {
@@ -17,16 +19,19 @@ const Login = () => {
 
   const from = location.state?.from?.pathName || "/";
 
+  const diffToast = () => {
+    alert("Login successful");
+  };
+
   const handleLogin = (data) => {
     signIn(data.email, data.password)
       .then((result) => {
         const user = result.user;
         console.log(user);
+        toast.success("Login successfully done");
         Navigate("/");
       })
-      .catch((err) => {
-        console.error(err.message);
-      });
+      .catch((err) => toast.error('invalid user', err));
   };
 
   const googleProvider = new GoogleAuthProvider();
@@ -37,8 +42,9 @@ const Login = () => {
         const user = result.user;
         console.log(user);
         Navigate(from, { replace: true });
+        toast.success("successfully done");
       })
-      .catch((err) => console.error(err));
+      .catch((err) => toast.error('invalid user', err));
   };
 
   return (
@@ -93,7 +99,9 @@ const Login = () => {
                   <p className="text-red-600">{errors.password?.message}</p>
                 )}
               </div>
+              <ToastContainer/>
               <input
+              onClick={diffToast}
                 className="btn btn-accent w-full"
                 value="login"
                 type="submit"

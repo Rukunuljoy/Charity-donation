@@ -1,9 +1,10 @@
 import React, { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
 import { Link, Navigate, useLocation, useNavigate } from "react-router-dom";
-import { FaGoogle, FaGithub, FaFacebook } from "react-icons/fa";
 import { AuthContext } from "../../../context/AuthProvider";
 import { GoogleAuthProvider } from "firebase/auth";
+import { ToastContainer, toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 const Registration = () => {
   const {
@@ -18,17 +19,23 @@ const Registration = () => {
 
   const from = location.state?.from?.pathname || "/";
 
+  const diffToast = () => {
+    alert("registration successful");
+  };
+
   const handleSignUp = (data) => {
     createUser(data.email, data.password)
       .then((result) => {
         const user = result.user;
         console.log(user);
+        toast.success("Registration successfully done");
         const userInfo = {
           displayName: data.name,
         };
         updateUser(userInfo)
           .then(() => {
             Navigate(from, { replace: true });
+            
           })
           .catch((err) => console.log(err));
       })
@@ -116,7 +123,9 @@ const Registration = () => {
                   <p className="text-red-600">{errors.password.message}</p>
                 )}
               </div>
+              <ToastContainer />
               <input
+              onClick={diffToast}
                 className="btn btn-accent mt-5 w-full"
                 value="Register"
                 type="submit"

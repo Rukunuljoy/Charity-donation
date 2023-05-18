@@ -11,7 +11,7 @@ const News = () => {
       Comment: "By Fardinad | 10 Comments",
     },
     {
-      id: 1,
+      id: 2,
       img: "https://i.ibb.co/JmXj5M2/2-1.jpg",
       date: "Jan 05, 2017",
       title: "Donation food for childrens",
@@ -19,7 +19,7 @@ const News = () => {
       Comment: "By Fardinad | 10 Comments",
     },
     {
-      id: 2,
+      id: 3,
       
       img: "https://i.ibb.co/wwKWJKx/3-1.jpg",
       date: "feb 05, 2018",
