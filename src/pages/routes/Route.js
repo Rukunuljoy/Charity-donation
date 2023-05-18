@@ -5,6 +5,9 @@ import Login from "../shared/Login/Login";
 import Registration from "../shared/Registration/Registration";
 import Gallery from "../component/Gallery/Gallery";
 import DonateService from "../component/DonateService/DonateService";
+import Contact from "../component/Contact/Contact";
+import Blog from "../component/Blog/Blog";
+import Event from "../component/Event/Event";
 
 export const router = createBrowserRouter([
     {
@@ -30,6 +33,18 @@ export const router = createBrowserRouter([
            {
             path:'/causes',
             element:<DonateService/>
+           },
+           {
+            path:'/contact',
+            element:<Contact/>
+           },
+           {
+            path:'/blog',
+            element:<Blog/>
+           },
+           {
+            path:'/event',
+            element:<Event/>
            },
         ]
     }

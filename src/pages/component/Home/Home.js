@@ -8,6 +8,7 @@ import ProjectReview from '../ProjectReview/ProjectReview';
 import Testimonial from '../Testimonial/Testimonial';
 import News from '../News/News';
 import Gallery from '../Gallery/Gallery';
+import Subscribe from '../Subcribe/Subscribe';
 
 const Home = () => {
     return (
@@ -17,10 +18,11 @@ const Home = () => {
             <DonateService/>
             <AboutDonation/>
             <NoteChild/>
-            <Testimonial/>
             <Gallery/>
             <ProjectReview/>
+            <Testimonial/>
             <News/>
+            <Subscribe/>
         </div>
     );
 };

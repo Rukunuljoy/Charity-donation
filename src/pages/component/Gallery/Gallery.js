@@ -1,6 +1,48 @@
 import React from 'react';
 
 const Gallery = () => {
+  const galleryData = [
+    {
+      id:1,
+      img:'https://i.ibb.co/mtRMhJH/yannis-h-ua-Pa-EM7-Mi-QQ-unsplash.jpg',
+      des:'Painted between 1503 and 1517, Da Vinci’s alluring portrait hasbeen dogged by two questions since the day it was made: Who’s the subject and why is she smiling?'
+    },
+    {
+      id:2,
+      img:'https://i.ibb.co/mtRMhJH/yannis-h-ua-Pa-EM7-Mi-QQ-unsplash.jpg',
+      des:'Painted between 1503 and 1517, Da Vinci’s alluring portrait hasbeen dogged by two questions since the day it was made: Who’s the subject and why is she smiling?'
+    },
+    {
+      id:3,
+      img:'https://i.ibb.co/mtRMhJH/yannis-h-ua-Pa-EM7-Mi-QQ-unsplash.jpg',
+      des:'Painted between 1503 and 1517, Da Vinci’s alluring portrait hasbeen dogged by two questions since the day it was made: Who’s the subject and why is she smiling?'
+    },
+    {
+      id:4,
+      img:'https://i.ibb.co/mtRMhJH/yannis-h-ua-Pa-EM7-Mi-QQ-unsplash.jpg',
+      des:'Painted between 1503 and 1517, Da Vinci’s alluring portrait hasbeen dogged by two questions since the day it was made: Who’s the subject and why is she smiling?'
+    },
+    {
+      id:5,
+      img:'https://i.ibb.co/mtRMhJH/yannis-h-ua-Pa-EM7-Mi-QQ-unsplash.jpg',
+      des:'Painted between 1503 and 1517, Da Vinci’s alluring portrait hasbeen dogged by two questions since the day it was made: Who’s the subject and why is she smiling?'
+    },
+    {
+      id:6,
+      img:'https://i.ibb.co/mtRMhJH/yannis-h-ua-Pa-EM7-Mi-QQ-unsplash.jpg',
+      des:'Painted between 1503 and 1517, Da Vinci’s alluring portrait hasbeen dogged by two questions since the day it was made: Who’s the subject and why is she smiling?'
+    },
+    {
+      id:7,
+      img:'https://i.ibb.co/mtRMhJH/yannis-h-ua-Pa-EM7-Mi-QQ-unsplash.jpg',
+      des:'Painted between 1503 and 1517, Da Vinci’s alluring portrait hasbeen dogged by two questions since the day it was made: Who’s the subject and why is she smiling?'
+    },
+    {
+      id:8,
+      img:'https://i.ibb.co/mtRMhJH/yannis-h-ua-Pa-EM7-Mi-QQ-unsplash.jpg',
+      des:'Painted between 1503 and 1517, Da Vinci’s alluring portrait hasbeen dogged by two questions since the day it was made: Who’s the subject and why is she smiling?'
+    },
+  ]
     return (
         <>
            <div className='text-center lg:mt-16 md:mt-12 sm:mt-10'>
