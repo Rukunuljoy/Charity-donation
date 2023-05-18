@@ -4,10 +4,10 @@ import Home from "../component/Home/Home";
 import Login from "../shared/Login/Login";
 import Registration from "../shared/Registration/Registration";
 import Gallery from "../component/Gallery/Gallery";
-import DonateService from "../component/DonateService/DonateService";
 import Contact from "../component/Contact/Contact";
 import Blog from "../component/Blog/Blog";
 import Event from "../component/Event/Event";
+import Donate from "../component/DonateService/Donate";
 
 export const router = createBrowserRouter([
     {
@@ -32,7 +32,7 @@ export const router = createBrowserRouter([
            },
            {
             path:'/causes',
-            element:<DonateService/>
+            element:<Donate/>
            },
            {
             path:'/contact',

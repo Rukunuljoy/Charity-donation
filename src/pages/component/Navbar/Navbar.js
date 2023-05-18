@@ -1,11 +1,19 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link} from 'react-router-dom';
 import Topbar from './Topbar';
 import img from './360_F_345156391_IJinl1hx16UCpeqk75DxTu62AisBJgiS.jpg'
+import { AuthContext } from '../../../context/AuthProvider';
 
 
 const Navbar = () => {
  
+  const { user,logOut } = useContext(AuthContext);
+
+  const handleSignOut = () =>{
+    logOut()
+    .then()
+    .catch(err => console.log(err));
+  }
   const menuItem = (
     <>
       <li className="font-semibold">
@@ -13,9 +21,6 @@ const Navbar = () => {
       </li>
           <li className="font-semibold">
             <Link to="/causes">causes</Link>
-          </li>
-          <li className="font-semibold">
-            <Link to="/events">events</Link>
           </li>
           <li className="font-semibold">
             <Link to="/gallery">gallery</Link>
@@ -26,10 +31,18 @@ const Navbar = () => {
           <li className="font-semibold">
             <Link to="/contact">Contact Us</Link>
           </li>
-     
+          {
+        user?.email ? 
+        <>
+          <li className="font-semibold">
+            <button onClick={handleSignOut} className="btn-ghost">Log Out</button>
+          </li>
+        </>
+      : 
         <li className="font-semibold">
           <Link to="/login">Login</Link>
         </li>
+      }
         </>
   );
     return (

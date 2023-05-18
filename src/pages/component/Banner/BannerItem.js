@@ -1,5 +1,6 @@
 import React from 'react';
 import './banner.css'
+import { Link } from 'react-router-dom';
 
 const BannerItem = ({slide}) => {
     const {image, id, prev ,next} = slide;
@@ -17,8 +18,8 @@ const BannerItem = ({slide}) => {
       <p className='text-white text-xl '>There are many variations of passages of  available, but the majority have suffered alteration in some form</p>
     </div>
     <div className="absolute flex justify-start transform -translate-y-1/2 w-2/5 left-24 top-3/4">
-    <button className="btn text-white hover:bg-orange-500 hover:border-none btn-outline mr-5">Donate Us</button>
-    <button className="btn text-white hover:bg-orange-500 hover:border-none btn-outline">Our Causes</button>
+    <Link to='/causes'><button  className="btn text-white hover:bg-orange-500 hover:border-none btn-outline mr-5">Donate Us</button></Link>
+    <Link to='/contact'><button className="btn text-white hover:bg-orange-500 hover:border-none btn-outline">Contact Us</button></Link>
     </div>
     <div className="absolute flex justify-end transform -translate-y-1/2 left-5 right-5 bottom-0">
       <a href={`#slide${prev}`} className="btn btn-circle mr-5">❮</a> 
